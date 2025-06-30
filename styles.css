@@ -1,0 +1,316 @@
+/* CSS RESET */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* VARS FOR WEBPAGE */
+
+:root {
+    --shadowRight: 12px 1px 1px 1px rgba(0,0,0,0.2);
+    --shadowBottom: 12px 12px 2px 1px rgba(0,0,0,0.2);
+    --shadowCards: 0px 2px 5px 5px rgba(0,0,0,0.2);
+}
+
+/* STYLES */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-rows: .5fr 1fr 1fr 1fr;
+    height: 100vh;
+}
+
+/* SIDE BAR STYLES */
+
+.sideBar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+}
+
+.branding {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.brandingTxt {
+    align-self: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.navContainer {
+    width: 250px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.sideBarNav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.sideBarNavTxt {
+    align-self: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.sideBarNavImg {
+    justify-self: end;
+}
+
+.settings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.settingsContainer {
+    width: 200px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.settingsTxt {
+    align-self: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.settingsImg {
+    justify-self: end;
+}
+
+/* HEADER STYLES  */
+
+.header {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+}
+
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.topHeaderLeft {
+    width: 50%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.searchInput {
+    border-radius: 12px;
+    width: 80%;
+    height: 2rem;
+}
+
+.topHeaderRight {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin-right: 2rem;
+}
+
+.topHeaderRight img {
+    border-radius: 50%;
+}
+
+.topHeaderRight h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-self: center;
+}
+
+.header2 {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.header2 section {
+    display: flex;
+    align-items: center;
+}
+
+#userName {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header2 nav {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    display: inline;
+    margin: 0 4rem;
+    background-color: blue;
+    color: white;
+    padding: .5rem 2rem;
+    border-radius: 14px;
+    box-shadow: var(--shadowCards);
+    border: 1px solid black;
+}
+
+/* BODY STYLES */
+
+.body1 {
+    grid-column: 2 / 4;
+    grid-row: 2 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    height: 90%;
+    width: 80%;
+    margin: 2rem auto;
+    box-shadow: var(--shadowCards);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    border: 2px solid black;
+    box-shadow: var(--shadowCards);
+}
+
+.card h2 { 
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cardLogos {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6rem;
+    gap: 4px;
+    margin-right: 2rem;
+}
+
+/* BODY2 STYLES */
+
+.body2 {
+    grid-column: 4 / 5;
+    grid-row: 2 / -1;
+}
+
+.announcements {
+    width: 80%;
+    margin: 2rem auto;
+    box-shadow: var(--shadowCards);
+    border: 1px solid black;
+}
+
+.announcements h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-left: 12px;
+}
+
+.announcementsContainer h3 {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-left: 12px;
+}
+
+.announcementsContainer p {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid black;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.trending {
+    width: 80%;
+    margin: 2rem auto;
+    box-shadow: var(--shadowCards);
+    border: 1px solid black;
+}
+
+.trending h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-left: 6px;
+}
+
+.ProfilePic {
+    border-radius: 50%;
+}
+
+.trending1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-left: 6px;
+}
+
+.trending1 h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#trending2 {
+    margin-left: 1rem;
+}
